@@ -1,64 +1,56 @@
 import 'dart:io';
 
 void main() {
-  var shopping = [];
-  bool mainstatus = true;
-  String? mainchoice;
-  while (mainstatus) {
-    String? num;
-    int? choice;
-    String? menu = """
-                    menu
-                     1) for add items
-                     2)for remove items
-                     """;
-    print(menu);
+  List mehul = [];
+  String? num;
 
-    print("enter your choice");
-    choice = int.parse(stdin.readLineSync()!);
+  for (int i = 1; i <= 2; i++) {
+    print("enter your name ");
+    num = stdin.readLineSync()!;
+    mehul.add(num);
+  }
+  print("-------------------");
+  for (var item in mehul) {
+    print(item);
+  }
 
-    if (choice == 1) {
-      var status = true;
-      while (status) {
-        print("enter your name");
-        num = stdin.readLineSync()!;
-        shopping.add(num);
+  print("do you want to perform more item \n1.Add \n2.Remove");
+  int? n = int.parse(stdin.readLineSync()!);
+  if (n == 1) {
+    bool status = true;
+    while (status) {
+      print("enter your name ");
+      num = stdin.readLineSync()!;
+      mehul.add(num);
 
-        print("do you want to add more \n yes for y \n no for n");
-        String? nxtchoice = stdin.readLineSync()!;
-        if (nxtchoice == "y") {
-          status = true;
-        } else {
-          status = false;
-        }
-      }
-    } else {
-      var status = true;
-      while (status) {
-        print("enter which items you want to remove");
-        num = stdin.readLineSync()!;
+      print("do you want to add more \n y for yes \n n for no");
+      String? choice = stdin.readLineSync()!;
 
-        shopping.remove(num);
-
-        print("do you want to add more \nyes for y \n no for n");
-        String? nxtchoice = stdin.readLineSync()!;
-        if (nxtchoice == "y") {
-          status = true;
-        } else {
-          status = false;
-        }
+      if (choice == "y") {
+        status = true;
+      } else {
+        status = false;
       }
     }
-    print(
-        "do you want to perform more options:\npress y for yes\npress n for no");
-    mainchoice = stdin.readLineSync()!;
-    if (mainchoice == "y") {
-      mainstatus = true;
-    } else {
-      mainstatus = false;
+  } else {
+    bool status = true;
+    while (status) {
+      print("enter your remove name ");
+      num = stdin.readLineSync()!;
+      mehul.remove(num);
+
+      print("do you want to remove more \n y for yes \n n for no");
+      String? choice = stdin.readLineSync()!;
+
+      if (choice == "y") {
+        status = true;
+      } else {
+        status = false;
+      }
     }
   }
-  for (var item in shopping) {
+  print("\n--------------------");
+  for (var item in mehul) {
     print(item);
   }
 }
