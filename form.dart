@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myproject/practice/chat.dart';
+// import 'package:myproject/practice/chat.dart';
 
 class form extends StatelessWidget {
   const form({super.key});
@@ -8,14 +8,14 @@ class form extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {
-              MaterialPageRoute materialPageRoute = new MaterialPageRoute(
-                builder: (context) => mychat(),
-              );
-              Navigator.of(context).push(materialPageRoute);
-            },
-            icon: Icon(Icons.arrow_back)),
+        // leading: IconButton(
+        //     onPressed: () {
+        //       MaterialPageRoute materialPageRoute = new MaterialPageRoute(
+        //         builder: (context) => mychat(),
+        //       );
+        //       Navigator.of(context).push(materialPageRoute);
+        //     },
+        //     icon: Icon(Icons.arrow_back)),
         title: Text('Form'),
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
         backgroundColor: Colors.teal[200],

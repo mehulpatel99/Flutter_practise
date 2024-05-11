@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:myproject/widgets_example/insta_page.dart';
+// import 'package:myproject/widgets_example/insta_page.dart';
 
 class mysplash extends StatefulWidget {
   const mysplash({super.key});
@@ -15,8 +15,9 @@ class _mysplashState extends State<mysplash> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 4), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => insta()));
+      // Navigator.pushReplacement(
+      //     // context, MaterialPageRoute(builder: (context) => insta())
+      // );
     });
   }
 
